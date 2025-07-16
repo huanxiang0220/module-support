@@ -1,0 +1,9 @@
+include ':app'
+buildCache {
+    local {
+        directory = new File(rootDir, 'build-cache')
+        removeUnusedEntriesAfterDays = 30
+    }
+}
+rootProject.name = "ModuleSupport"
+include ':module-support'
